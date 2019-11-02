@@ -1,0 +1,35 @@
+<project name="usermanagement_me" basedir="." default="test">
+	
+	<property name="main-java-dir" value="${basedir}/src/main/java"/>
+	<property name="test-java-dir" value="${basedir}/src/test/java"/>
+	<property name="build-dir" value="${basedir}/target"/>
+	<property name="classes-dir" value="${build-dir}/classes"/> 
+	
+	<target name="clean">
+		<delete dir="${build-dir}"/>
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${build-dir}"/>
+		<mkdir dir="${classes-dir}"/>  
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac srcdir="${main-java-dir}" destdir="${build-dir}"/>
+	</target>
+	
+	<target name="test-compile" depends="init">
+			<javac srcdir="${test-java-dir}" destdir="${build-dir}"/>
+	</target>
+	
+	<target name="test">
+		<junit>
+			<classpath>
+				<pathelement location="${build-dir}"/>
+			</classpath>
+			<formatter type="plain"/>
+			<test name="ua.nure.kn.herasymov.usermanagement_me.UserTest"/>
+		</junit>		
+	</target>
+
+</project>
