@@ -3,6 +3,7 @@ package ua.nure.kn.herasymov.usermanagement_me.db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class ConnectioFactoryImpl implements ConnectonFactory {
 
@@ -16,6 +17,13 @@ public class ConnectioFactoryImpl implements ConnectonFactory {
 		this.url=url;
 		this.user=user;
 		this.password=password;
+	}
+
+	public ConnectioFactoryImpl(Properties properties) {
+		user = properties.getProperty("connection.user");
+		password = properties.getProperty("connection.password");
+		url = properties.getProperty("connection.url");
+		driver = properties.getProperty("connection.driver");
 	}
 
 	@Override
