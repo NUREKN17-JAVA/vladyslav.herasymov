@@ -1,4 +1,4 @@
-<jsp:useBean id="user" class="ua.nure.cs.chumak.usermanagement1.domain.User" scope="session"/>
+<jsp:useBean id="user" class="ua.nure.kn.herasymov.usermanagement_me.User" scope="session"/>
 <html>
 <head><title>User management. Edit</title></head>
 <body>
