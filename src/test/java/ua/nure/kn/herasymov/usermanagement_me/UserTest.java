@@ -4,7 +4,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 import junit.framework.TestCase;
-import ua.nure.kn.herasymov.usermanagement_me.User;
 
 public class UserTest extends TestCase {
 

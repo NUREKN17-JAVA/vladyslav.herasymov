@@ -31,7 +31,6 @@ public class HsqldbUserDaoTest extends DatabaseTestCase {
 	private HsqldbUserDao dao;
 	private ConnectonFactory connectonFactory;
 	
-
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
