@@ -22,7 +22,7 @@
 	        		<pathelement location="${build-dir}"/>
 	        	</classpath>
 	        	<formatter type="plain"/>
-	        	<test name="ua.nure.cs.petrykin.usermanagement.domain.UserTest"/>
+	        	<test name="ua.nure.kn.herasymov.usermanagement_me.UserTest"/>
 	        </junit>
 	    </target>
 
@@ -69,7 +69,7 @@
 	    <target name="test-compile" depends="compile">
 	    	<javac srcdir="${test-java-dir}" destdir="${build-dir}" includeantruntime="false">
 	    		<classpath>
-	    			<path id="org.junit" location="C:\Users\milan\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar"/>
+	    			<path id="org.junit" location="C:\Users\vlad-\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar"/>
 	    		</classpath>
 	    	</javac>
 	    </target>
