@@ -2,6 +2,7 @@ package ua.nure.kn.herasymov.usermanagement_me.db;
 
 import java.util.Collection;
 
+import ua.nure.cs.petrykin.usermanagement.db.DatabaseException;
 import ua.nure.kn.herasymov.usermanagement_me.User;
 
 public interface UserDao {
@@ -16,6 +17,8 @@ public interface UserDao {
 	
 	@SuppressWarnings("rawtypes")
 	Collection findAll() throws DatabaseException;
+	
+	User find(String firstName, String lastName) throws DatabaseException;
 	
 	void setConnectonFactory(ConnectonFactory connectonFactory);
 	

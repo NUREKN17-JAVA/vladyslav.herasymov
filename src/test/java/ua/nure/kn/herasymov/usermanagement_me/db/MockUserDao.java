@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import ua.nure.cs.petrykin.usermanagement.db.DatabaseException;
 import ua.nure.kn.herasymov.usermanagement_me.User;
 
 public class MockUserDao implements UserDao {
@@ -50,8 +51,8 @@ public class MockUserDao implements UserDao {
 	public void setConnectonFactory(ConnectonFactory connectonFactory) {
 		// TODO Auto-generated method stub
 	}
-	public Collection find(String firstName, String lastName) throws DatabaseException{
-		throw new UnsupportedOperationException();
-	}
+	public Collection find(String firstName, String lastName) throws DatabaseException {
+        throw new UnsupportedOperationException();
+    }
 
 }
